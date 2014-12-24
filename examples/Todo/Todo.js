@@ -188,7 +188,7 @@ App.state = new O.Router({
     listId: '',
     search: '',
 
-    /* The currently selected TodoList. This is always "Inbox" at the moment,
+    /* The currently selected TodoList. This is always "Main" at the moment,
        but it would be easy to extend the UI to allow you to switch between
        lists.
     */
@@ -238,14 +238,14 @@ App.state = new O.Router({
     */
     isLoadingList: false,
 
-    /* If the current TodoList is destroyed, go back to the Inbox TodoList
+    /* If the current TodoList is destroyed, go back to the Main TodoList
        (we assume this is always present). If we arrived via a URL, we may have
        tried to load a list id that doesn't actually exist; in this case, the
        same behaviour is applied.
     */
     checkListStatus: function ( _, __, ___, status )  {
         if ( status & (O.Status.DESTROYED|O.Status.NON_EXISTENT) ) {
-            this.set( 'listId', 'inbox' );
+            this.set( 'listId', 'main' );
         } else {
             this.set( 'isLoadingList', !!( status & O.Status.LOADING ) );
         }
@@ -313,7 +313,7 @@ App.state = new O.Router({
             handle: function () {
                 /* Don't keep the old state in history */
                 this.set( 'replaceState', true );
-                this.set( 'listId', 'inbox' );
+                this.set( 'listId', 'main' );
             }
         }
     ]

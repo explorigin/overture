@@ -8,8 +8,8 @@ var API = {
         results.push([ 'todoLists', {
             state: 'foo',
             list: [{
-                id: 'inbox',
-                name: 'Inbox'
+                id: 'main',
+                name: 'Main'
             }, {
                 id: 'someday',
                 name: 'Someday'
@@ -28,42 +28,42 @@ var API = {
             state: 'foo',
             list: [{
                 id: 't1',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 32,
                 summary: 'Open OvertureJS Todo demo app',
                 isComplete: true,
                 start: null
             }, {
                 id: 't2',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 64,
                 summary: 'Drag & drop to reorder',
                 isComplete: false,
                 start: null
             }, {
                 id: 't3',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 96,
                 summary: 'Up/down or j/k to change focus',
                 isComplete: false,
                 start: null
             }, {
                 id: 't4',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 128,
                 summary: 'Hit tab to edit',
                 isComplete: false,
                 start: null
             }, {
                 id: 't5',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 128,
                 summary: 'Hit enter to create a new todo',
                 isComplete: false,
                 start: null
             }, {
                 id: 't6',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 128,
                 summary: 'Hit space to toggle isComplete',
                 isComplete: false,
@@ -71,7 +71,7 @@ var API = {
             }, {
 
                 id: 't7',
-                listId: 'inbox',
+                listId: 'main',
                 precedence: 160,
                 summary: 'Cmd-Z for undo, Cmd-Shift-Z for redo',
                 isComplete: false,
